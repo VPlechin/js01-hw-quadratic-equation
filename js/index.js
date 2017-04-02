@@ -9,13 +9,16 @@ function quadratic(a, b, c){
                 x1 = -b / 2*a;
                 x2 = x1;
                 return [d, x1, x2];
-                } else {
-                    document.write('Discriminant is a negative number ');
+                } else if (d < 0){
+                    document.write(' Discriminant is a negative number: ');
                     }
-    }
-        
+                    else {
+                        document.write(' Input not all numbers: ');
+                        }
+        }   
 var num1 = Number(prompt('Input variable a:'));
 var num2 = Number(prompt('Input variable b:'));
 var num3 = Number(prompt('Input variable c:'));
+document.write('a, b, c = ', num1, ',', num2, ',', num3, ';');
 var result = quadratic(num1, num2, num3);
-document.write(' d, x1, x2 = ', result);
+document.write(' discriminant d, root x1, root x2 = ', result);
